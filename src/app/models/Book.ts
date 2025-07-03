@@ -21,6 +21,7 @@ export interface IBook extends Document {
   available: boolean;
   createdAt: Date;
   updatedAt: Date;
+  borrowBooks: (quantity: number) => void;
 }
 
 // Define the Book schema

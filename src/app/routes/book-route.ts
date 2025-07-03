@@ -1,7 +1,7 @@
 import { BookController } from "../controller/book-controller";
-import express, { type Router } from "express";
+import { Router } from "express";
 
-const bookRouter: Router = express.Router();
+const bookRouter = Router();
 
 bookRouter.post("/", BookController.createBook);
 

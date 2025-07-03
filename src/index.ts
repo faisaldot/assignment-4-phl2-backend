@@ -5,6 +5,7 @@ import cors from "cors";
 import connectDb from "./app/config/database";
 import { errorHandler, notFound } from "./app/middleware/error-handler";
 import bookRouter from "./app/routes/book-route";
+import borrowRouter from "./app/routes/borrow-routes";
 
 const PORT = process.env.PORT;
 const app: Express = express();
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/books", bookRouter);
+app.use("/api/borrow", borrowRouter);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
