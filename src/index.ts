@@ -2,8 +2,9 @@ import "dotenv/config";
 import express, { type Express } from "express";
 import cors from "cors";
 
-import connectDb from "../src/app/config/database";
-import { errorHandler, notFound } from "../src/app/middleware/error-handler";
+import connectDb from "./app/config/database";
+import { errorHandler, notFound } from "./app/middleware/error-handler";
+import bookRouter from "./app/routes/book-route";
 
 const PORT = process.env.PORT;
 const app: Express = express();
@@ -15,6 +16,9 @@ connectDb();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Routes
+app.use("/api/books", bookRouter);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
