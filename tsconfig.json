@@ -21,7 +21,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
-    "baseUrl": "./"
+    "baseUrl": "./src"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
