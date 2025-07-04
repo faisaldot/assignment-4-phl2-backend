@@ -4,6 +4,8 @@
   "description": "A simple api for online book library",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
