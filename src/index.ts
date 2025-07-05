@@ -1,4 +1,4 @@
-import "dotenv/config";
+import dotenv from "dotenv";
 import express, { type Express } from "express";
 import cors from "cors";
 
@@ -10,17 +10,20 @@ import borrowRouter from "./app/routes/borrow-routes";
 const PORT = process.env.PORT;
 const app: Express = express();
 
+dotenv.config();
+
 // Connecting to Database
 connectDb();
 
 //Middleware
-app.use(
-  cors({
-    origin: ["https://assignment-4-phl2.vercel.app/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: "https://assignment-4-phl2.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

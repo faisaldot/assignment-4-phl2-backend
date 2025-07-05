@@ -40,8 +40,8 @@ Follow these steps to get the project up and running on your local machine.
 1.  Clone the repository:
 
 ```bash
- git clone  https://github.com/faisaldot/assignment-3-phl2.git
- cd assignment-3-phl2
+ git clone  https://github.com/faisaldot/assignment-4-phl2-backend
+ cd assignment-4-phl2-backend
 ```
 
 2. Install dependencies:
@@ -100,8 +100,4 @@ The API base URL is `/api`.
 
 ## 🔗 Live Deployment
 
-https://assignment-3-phl2.vercel.app/
-
-## Video Explanation Link
-
-https://www.loom.com/share/3faa0842af1a4851b8adcd23c3c31bde?sid=3f65399a-ec0e-4d75-9074-5da7de81f17a
+https://assignment-4-backend-silk.vercel.app/api/
